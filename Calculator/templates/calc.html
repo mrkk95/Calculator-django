@@ -2,17 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet"/>
     <title>Simple Calculator</title>
 </head>
-<body>
-    <div class="container">
+<body style="color: blue; background-color: yellow">
+    <div class="container" style="padding-left: 210px; padding-top: 10px; padding-right: 210px">
+    <div class="justify-content-center">
         <h1>Mathematical Operations</h1>
-            <form method="post" action="calc">
-                {% csrf_token %}
-                {{ form.as_p }}
-                <button type="submit">Calculate</button>
+            <form method="post" action="calc" style="padding-top: 50px">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit">Calculate</button>
             </form>
+            <h2>ans = {{ text }}</h2>
     </div>
-    <h2>ans = {{ text }}</h2>
+    </div>
+    
 </body>
 </html>
